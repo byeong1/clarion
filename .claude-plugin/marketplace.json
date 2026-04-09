@@ -1,0 +1,17 @@
+{
+    "name": "clarion-plugins",
+    "owner": {
+        "name": "byeong1",
+        "url": "https://github.com/byeong1"
+    },
+    "plugins": [
+        {
+            "name": "clarion",
+            "source": {
+                "source": "npm",
+                "package": "@baebyeongil/clarion"
+            },
+            "description": "Chat room-based messaging for inter-session communication in Claude Code"
+        }
+    ]
+}
