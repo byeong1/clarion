@@ -27,7 +27,7 @@
     "scripts": {
         "prepublishOnly": "tsc",
         "build": "tsc",
-        "release": "bash scripts/publish.sh",
+        "release": "node scripts/publish.js",
         "start": "node dist/main.js",
         "dev": "tsc && node dist/main.js"
     },
