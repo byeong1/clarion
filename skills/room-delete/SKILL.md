@@ -1,6 +1,7 @@
 ---
 name: room-delete
 description: 채팅방을 삭제합니다 (방장만 가능)
+user-invocable: true
 ---
 
 AskUserQuestion을 사용하여 삭제할 방 이름 (room)을 입력받으세요.

@@ -1,6 +1,7 @@
 ---
 name: send
 description: 채팅방에 메시지를 전송합니다
+user-invocable: true
 ---
 
 AskUserQuestion을 사용하여 다음 정보를 입력받으세요:

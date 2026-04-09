@@ -1,6 +1,7 @@
 ---
 name: room
 description: 채팅방에 참여하거나 새로 생성합니다
+user-invocable: true
 ---
 
 AskUserQuestion을 사용하여 다음 정보를 입력받으세요:
