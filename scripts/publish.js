@@ -35,6 +35,12 @@ const setPackageVersion = (newVersion) => {
     const packageJson = JSON.parse(readFileSync("package.json", "utf-8"));
     packageJson.version = newVersion;
     writeFileSync("package.json", JSON.stringify(packageJson, null, 4) + "\n");
+
+    /* plugin.json 버전도 동기화 */
+    const pluginJsonPath = ".claude-plugin/plugin.json";
+    const pluginJson = JSON.parse(readFileSync(pluginJsonPath, "utf-8"));
+    pluginJson.version = newVersion;
+    writeFileSync(pluginJsonPath, JSON.stringify(pluginJson, null, 4) + "\n");
 };
 
 const main = async () => {
