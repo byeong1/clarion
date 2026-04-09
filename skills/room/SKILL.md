@@ -7,11 +7,12 @@ argument-hint: "[room] [name] [role]"
 
 Arguments: $ARGUMENTS
 
-If arguments are provided (3 values: room, name, role), call `room_join` tool directly with those values.
+If all 3 arguments are provided (room, name, role), call `room_join` tool directly.
 
-If no arguments provided, ask the user sequentially:
-1. Room name
-2. Display name
-3. Role
+If no arguments provided, follow these steps:
 
-Then call `room_join` tool with the collected values.
+1. Call `room_list` tool to get existing rooms.
+2. Use AskUserQuestion to ask room name. Use existing room names as options. The user can also type a new room name via "Type something".
+3. Use AskUserQuestion to ask display name. Provide 2 example options (e.g. "Frontend", "Backend"). The user can also type their own via "Type something".
+4. Use AskUserQuestion to ask role. Provide 2 example options (e.g. "Frontend developer", "Backend developer"). The user can also type their own via "Type something".
+5. Call `room_join` tool with the collected values.

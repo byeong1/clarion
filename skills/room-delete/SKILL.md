@@ -7,8 +7,12 @@ argument-hint: "[room]"
 
 Arguments: $ARGUMENTS
 
-If argument is provided, call `room_delete` tool directly with that room name.
+If argument is provided, call `room_delete` tool directly.
 
-If no argument provided, ask the user for the room name, then call `room_delete` tool.
+If no argument provided:
+
+1. Call `room_list` tool to get existing rooms.
+2. Use AskUserQuestion to ask which room to delete. Use existing room names as options.
+3. Call `room_delete` tool with the selected room.
 
 Only the room creator can delete a room.
