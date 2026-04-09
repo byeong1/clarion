@@ -7,7 +7,6 @@ import type { InboxWatcher } from "./watcher.js";
 const SESSION_ID = `pid-${process.ppid}`;
 
 let currentInboxWatcher: InboxWatcher | null = null;
-
 export const setInboxWatcher = (watcher: InboxWatcher): void => {
     currentInboxWatcher = watcher;
 };
