@@ -4,6 +4,10 @@
     "description": "Chat room-based messaging MCP server for inter-session communication in Claude Code",
     "type": "module",
     "license": "MIT",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
+    },
     "author": "byeong1",
     "repository": {
         "type": "git",
