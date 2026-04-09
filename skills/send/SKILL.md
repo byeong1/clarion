@@ -2,11 +2,15 @@
 name: send
 description: 채팅방에 메시지를 전송합니다
 user-invocable: true
+argument-hint: "[room] [content]"
 ---
 
-AskUserQuestion을 사용하여 다음 정보를 입력받으세요:
+Arguments: $ARGUMENTS
 
-1. 방 이름 (room) - 텍스트 입력
-2. 메시지 내용 (content) - 텍스트 입력
+If arguments are provided (first word is room name, rest is content), call `room_send` tool directly.
 
-입력받은 값으로 `room_send` tool을 호출하세요.
+If no arguments provided, ask the user sequentially:
+1. Room name
+2. Message content
+
+Then call `room_send` tool with the collected values.

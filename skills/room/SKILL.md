@@ -2,12 +2,16 @@
 name: room
 description: 채팅방에 참여하거나 새로 생성합니다
 user-invocable: true
+argument-hint: "[room] [name] [role]"
 ---
 
-AskUserQuestion을 사용하여 다음 정보를 입력받으세요:
+Arguments: $ARGUMENTS
 
-1. 방 이름 (room) - 텍스트 입력
-2. 표시 이름 (name) - 텍스트 입력
-3. 역할 (role) - 텍스트 입력
+If arguments are provided (3 values: room, name, role), call `room_join` tool directly with those values.
 
-입력받은 값으로 `room_join` tool을 호출하세요.
+If no arguments provided, ask the user sequentially:
+1. Room name
+2. Display name
+3. Role
+
+Then call `room_join` tool with the collected values.
