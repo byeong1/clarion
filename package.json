@@ -1,0 +1,42 @@
+{
+    "name": "@baebyeongil/clarion",
+    "version": "0.1.0",
+    "description": "Chat room-based messaging MCP server for inter-session communication in Claude Code",
+    "type": "module",
+    "license": "MIT",
+    "author": "byeong1",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/byeong1/clarion.git"
+    },
+    "keywords": [
+        "mcp",
+        "claude-code",
+        "chat",
+        "session",
+        "channel"
+    ],
+    "files": [
+        "dist",
+        "skills",
+        ".claude-plugin",
+        ".mcp.json",
+        "README.md",
+        "README.ko.md"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/main.js",
+        "dev": "tsc && node dist/main.js"
+    },
+    "bin": {
+        "clarion": "./dist/main.js"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.29.0"
+    },
+    "devDependencies": {
+        "@types/node": "^25.5.2",
+        "typescript": "^6.0.2"
+    }
+}
