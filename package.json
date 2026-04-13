@@ -1,6 +1,6 @@
 {
     "name": "@baebyeongil/clarion",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "Chat room-based messaging MCP server for inter-session communication in Claude Code",
     "type": "module",
     "license": "MIT",
