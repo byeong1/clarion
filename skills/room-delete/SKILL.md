@@ -3,7 +3,7 @@ name: room-delete
 description: 채팅방을 삭제합니다 (방장만 가능)
 user-invocable: true
 argument-hint: "[room]"
-allowed-tools: ["AskUserQuestion", "ToolSearch"]
+allowed-tools: ["AskUserQuestion"]
 ---
 
 **MUST read [channel-check.md](../shared/channel-check.md) and follow its steps before proceeding.**

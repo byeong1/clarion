@@ -1,10 +1,6 @@
-## Prerequisites
-
-Before starting, MUST run `ToolSearch({ query: "select:AskUserQuestion" })` to fetch the tool schema. Do NOT substitute with plain text questions.
-
 ## Channel Check
 
-Use the `AskUserQuestion` tool to confirm channel mode:
+MUST use the `AskUserQuestion` tool to confirm channel mode. Do NOT substitute with plain text questions:
 
 ```
 AskUserQuestion({

@@ -3,7 +3,7 @@ name: room
 description: 채팅방에 참여하거나 새로 생성합니다
 user-invocable: true
 argument-hint: "[room] [name] [role]"
-allowed-tools: ["AskUserQuestion", "ToolSearch"]
+allowed-tools: ["AskUserQuestion"]
 ---
 
 **MUST read [channel-check.md](../shared/channel-check.md) and follow its steps before proceeding.**

@@ -3,7 +3,7 @@ name: room-leave
 description: 채팅방에서 나갑니다
 user-invocable: true
 argument-hint: "[room]"
-allowed-tools: ["AskUserQuestion", "ToolSearch"]
+allowed-tools: ["AskUserQuestion"]
 ---
 
 **MUST read [channel-check.md](../shared/channel-check.md) and follow its steps before proceeding.**
