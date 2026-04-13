@@ -8,9 +8,8 @@
         {
             "name": "clarion",
             "source": {
-                "source": "npm",
-                "package": "@baebyeongil/clarion",
-                "version": "0.1.4"
+                "source": "url",
+                "url": "https://github.com/byeong1/clarion.git"
             },
             "description": "Chat room-based messaging for inter-session communication in Claude Code"
         }
