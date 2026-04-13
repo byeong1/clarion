@@ -20,26 +20,15 @@
         "session",
         "channel"
     ],
-    "files": [
-        "dist",
-        "skills",
-        ".claude-plugin",
-        ".mcp.json",
-        "README.md",
-        "README.ko.md"
-    ],
     "scripts": {
-        "prepublishOnly": "tsc",
         "build": "tsc",
         "release": "node scripts/publish.js",
-        "start": "node dist/main.js",
-        "dev": "tsc && node dist/main.js"
-    },
-    "bin": {
-        "clarion": "./dist/main.js"
+        "start": "npx tsx src/main.ts",
+        "dev": "npx tsx src/main.ts"
     },
     "dependencies": {
-        "@modelcontextprotocol/sdk": "^1.29.0"
+        "@modelcontextprotocol/sdk": "^1.29.0",
+        "tsx": "^4.19.0"
     },
     "devDependencies": {
         "@types/node": "^25.5.2",
