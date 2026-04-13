@@ -1,7 +1,7 @@
 {
     "name": "clarion",
     "description": "Chat room-based messaging for inter-session communication in Claude Code",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "author": {
         "name": "byeong1"
     }
