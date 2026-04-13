@@ -3,6 +3,7 @@ name: send
 description: 채팅방에 메시지를 전송합니다
 user-invocable: true
 argument-hint: "[room] [content]"
+allowed-tools: ["AskUserQuestion", "ToolSearch"]
 ---
 
 **MUST read [channel-check.md](../shared/channel-check.md) and follow its steps before proceeding.**
