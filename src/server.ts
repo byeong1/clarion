@@ -100,11 +100,18 @@ const registerTools = (server: McpServer): void => {
 
             const actionLabel = joinResult.isNewRoom ? "created" : "joined";
 
+            const clientCapabilities = server.server.getClientCapabilities();
+            const hasChannelSupport = clientCapabilities?.experimental?.["claude/channel"] !== undefined;
+
+            const warningText = hasChannelSupport
+                ? ""
+                : "\n\n⚠️ 실시간 메시지 수신이 비활성 상태입니다. 아래 명령으로 재시작하세요:\nclaude --dangerously-load-development-channels plugin:clarion@clarion-plugins";
+
             return {
                 content: [
                     {
                         type: "text" as const,
-                        text: `Room "${room}" ${actionLabel}. Current members (${joinResult.room.members.length}):\n${memberList}`,
+                        text: `Room "${room}" ${actionLabel}. Current members (${joinResult.room.members.length}):\n${memberList}${warningText}`,
                     },
                 ],
             };
