@@ -10,7 +10,7 @@
             "source": {
                 "source": "npm",
                 "package": "@baebyeongil/clarion",
-                "version": "^0.1.0"
+                "version": "0.1.4"
             },
             "description": "Chat room-based messaging for inter-session communication in Claude Code"
         }
