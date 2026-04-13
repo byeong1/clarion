@@ -116,7 +116,7 @@ const main = async () => {
 
     /* 9. Git commit + tag (if version was bumped) */
     if (newVersion !== currentVersion) {
-        run("git add package.json");
+        run("git add package.json .claude-plugin/plugin.json");
         run(`git commit -m "chore: release v${newVersion}"`);
         run(`git tag v${newVersion}`);
         run("git push && git push --tags");
