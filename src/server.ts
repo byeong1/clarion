@@ -60,13 +60,6 @@ export const createServer = (): McpServer => {
     return server;
 };
 
-const CHANNEL_WARNING = "\n\n⚠️ 실시간 메시지 수신이 비활성 상태입니다. 아래 명령으로 재시작하세요:\nclaude --dangerously-load-development-channels plugin:clarion@clarion-plugins";
-
-const getChannelWarning = (server: McpServer): string => {
-    const clientCapabilities = server.server.getClientCapabilities();
-    const hasChannelSupport = clientCapabilities?.experimental?.["claude/channel"] !== undefined;
-    return hasChannelSupport ? "" : CHANNEL_WARNING;
-};
 
 const registerTools = (server: McpServer): void => {
     /* room_join */
@@ -112,7 +105,7 @@ const registerTools = (server: McpServer): void => {
                 content: [
                     {
                         type: "text" as const,
-                        text: `Room "${room}" ${actionLabel}. Current members (${joinResult.room.members.length}):\n${memberList}${getChannelWarning(server)}`,
+                        text: `Room "${room}" ${actionLabel}. Current members (${joinResult.room.members.length}):\n${memberList}`,
                     },
                 ],
             };
@@ -170,7 +163,7 @@ const registerTools = (server: McpServer): void => {
                 content: [
                     {
                         type: "text" as const,
-                        text: `Message sent to ${recipientCount} recipient(s) in room "${room}".${getChannelWarning(server)}`,
+                        text: `Message sent to ${recipientCount} recipient(s) in room "${room}".`,
                     },
                 ],
             };
@@ -190,7 +183,7 @@ const registerTools = (server: McpServer): void => {
                     content: [
                         {
                             type: "text" as const,
-                            text: `No rooms.${getChannelWarning(server)}`,
+                            text: "No rooms.",
                         },
                     ],
                 };
@@ -213,7 +206,7 @@ const registerTools = (server: McpServer): void => {
                 content: [
                     {
                         type: "text" as const,
-                        text: `${allRooms.length} room(s):\n\n${roomDescriptions}${getChannelWarning(server)}`,
+                        text: `${allRooms.length} room(s):\n\n${roomDescriptions}`,
                     },
                 ],
             };
@@ -251,9 +244,9 @@ const registerTools = (server: McpServer): void => {
                 content: [
                     {
                         type: "text" as const,
-                        text: (isRemoved
+                        text: isRemoved
                             ? `Left room "${room}" successfully.`
-                            : "Room or member not found.") + getChannelWarning(server),
+                            : "Room or member not found.",
                     },
                 ],
             };
@@ -298,7 +291,7 @@ const registerTools = (server: McpServer): void => {
                 content: [
                     {
                         type: "text" as const,
-                        text: `Room "${room}" deleted successfully.${getChannelWarning(server)}`,
+                        text: `Room "${room}" deleted successfully.`,
                     },
                 ],
             };
@@ -318,7 +311,7 @@ const registerTools = (server: McpServer): void => {
                     content: [
                         {
                             type: "text" as const,
-                            text: `Not a member of any room.${getChannelWarning(server)}`,
+                            text: "Not a member of any room.",
                         },
                     ],
                 };
@@ -334,7 +327,7 @@ const registerTools = (server: McpServer): void => {
                 content: [
                     {
                         type: "text" as const,
-                        text: `Member of ${memberRooms.length} room(s):\n${roomDescriptions}${getChannelWarning(server)}`,
+                        text: `Member of ${memberRooms.length} room(s):\n${roomDescriptions}`,
                     },
                 ],
             };
