@@ -5,7 +5,7 @@ user-invocable: true
 argument-hint: "[room]"
 ---
 
-First, use AskUserQuestion to confirm channel mode:
+First, run ToolSearch({ query: "select:AskUserQuestion" }) to load the tool schema. Then use AskUserQuestion to confirm channel mode:
 - question: "채널 모드로 실행하셨습니까?"
 - header: "Channel"
 - options:

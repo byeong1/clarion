@@ -4,7 +4,7 @@ description: 내가 참여 중인 채팅방 목록을 조회합니다
 user-invocable: true
 ---
 
-First, use AskUserQuestion to confirm channel mode:
+First, run ToolSearch({ query: "select:AskUserQuestion" }) to load the tool schema. Then use AskUserQuestion to confirm channel mode:
 - question: "채널 모드로 실행하셨습니까?"
 - header: "Channel"
 - options:
